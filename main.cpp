@@ -13,6 +13,8 @@
 
 #include "gameobjectfactory.h"
 
+#include "keyprocessor.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -26,6 +28,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<Eagle>("com.skident.eagle", 1, 0, "EagleCpp");
     qmlRegisterType<Brick>("com.skident.brick", 1, 0, "BrickCpp");
     qmlRegisterType<Bullet>("com.skident.bullet", 1, 0, "BulletCpp");
+    qmlRegisterType<KeyProcessor>("com.skident.keyprocessor", 1, 0, "KeyProcessorCpp");
 
 
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));

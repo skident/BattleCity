@@ -18,7 +18,6 @@ static uniform_int_distribution<> dis4(2, 8);
 Bot::Bot()
 {
     m_isPlayer = false;
-//    m_isFreezed = true;
     connect(this, SIGNAL(nextStep()), SLOT(moveProcess()));
     std::thread tr(&Bot::navigator, this);
     tr.detach();
@@ -33,13 +32,6 @@ Bot::~Bot()
 
 void Bot::moveProcess()
 {
-//    concreteStep(step_down);
-//    fire();
-//    concreteStep(step_right);
-//    fire();
-//    freeze();
-
-
     if (m_isFreezed)
     {
         return;
@@ -55,7 +47,6 @@ void Bot::moveProcess()
     {
         fire();
         step = 0;
-//        freeze();
     }
 }
 

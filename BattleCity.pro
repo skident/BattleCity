@@ -1,7 +1,7 @@
 TEMPLATE = app
 
-QT += qml quick
 CONFIG += c++11 thread
+QT += quick qml
 
 SOURCES += main.cpp \
     basetank.cpp \
@@ -14,7 +14,8 @@ SOURCES += main.cpp \
     gameobject.cpp \
     brick.cpp \
     gameobjectfactory.cpp \
-    level.cpp
+    level.cpp \
+    keyprocessor.cpp
 
 RESOURCES += qml.qrc
 
@@ -35,4 +36,5 @@ HEADERS += \
     gameobject.h \
     brick.h \
     gameobjectfactory.h \
-    level.h
+    level.h \
+    keyprocessor.h

@@ -6,11 +6,6 @@ PlayerCpp {
     objectName: "player"
     width: 36
     height: 36
-    x: 180
-    y: field.height-height
-
-    focus: true
-    Keys.onPressed: player.keyPressed(event.key);
 
     Image {
         source: "sprites/tank_new.png"

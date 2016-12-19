@@ -3,6 +3,7 @@
 
 #include <QList>
 #include <QObject>
+#include <memory>
 
 class Eagle;
 class BaseTank;

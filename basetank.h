@@ -30,7 +30,6 @@ public:
     Q_INVOKABLE void init();
     void setBullet(std::shared_ptr<Bullet> bullet)
     {
-//        qDebug() << bullet->getInfo();
         m_bullet = bullet;
         m_bullet->setBulletOwner(m_isPlayer);
     }
@@ -49,7 +48,6 @@ protected:
     bool m_isPlayer = true;
     std::atomic<bool> m_isFreezed;
     std::shared_ptr<Bullet> m_bullet;
-//    Bullet* m_bullet;
 
     const QMap<Step, int> m_angles = {
         {step_up, 0},

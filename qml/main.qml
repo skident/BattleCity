@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import com.skident.tank 1.0
 import com.skident.enemy 1.0
 import com.skident.eagle 1.0
+import com.skident.keyprocessor 1.0
 
 Window {
     visible: true
@@ -35,20 +36,17 @@ Window {
         id: field
         color: "black"
         anchors.centerIn: parent
-//        focus: true
-//        Keys.onPressed: {
 
-//            switch (event.key)
-//            {
-//            case Qt.Key_Down:
-//            case Qt.Key_Up:
-//            case Qt.Key_Left:
-//            case Qt.Key_Right:
-//            case Qt.Key_Space:
-//                player.keyPressed(event.key);
-//                break;
-//            }
-//        }
+        KeyProcessorCpp {
+            width: parent.width
+            height: parent.height
+            id: presser
+            focus: true
+            Keys.onPressed: {
+                pressed(event.key);
+            }
+        }
+
 
         Level_1 {}
 
@@ -101,11 +99,5 @@ Window {
                 }
             }
         }
-
-//        EnemyTank {}
-//        EnemyTank {}
-//        EnemyTank {}
-
-//        Player { id: player}
     }
 }

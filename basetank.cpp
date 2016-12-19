@@ -54,28 +54,13 @@ QPoint BaseTank::bulletCoord()
         m_bulletCoord.setY(y + height / 2 - halfHeight);
     }
 
-//    m_bullet->setProperty("x", m_bulletCoord.x());
-//    m_bullet->setProperty("y", m_bulletCoord.y());
-
-//    qDebug() << m_bulletCoord;
     return m_bulletCoord;
 }
 
 
 void BaseTank::init()
 {
-//    QObject* bullet = nullptr;
-//    if (!m_isPlayer)
-//        bullet = findChild<QObject*>("bullet");
-//    else
-//        bullet = parent()->findChild<QObject*>("bullet");
-//    qDebug() << bullet;
-
-//    m_bullet.reset(new Bullet(bullet, m_isPlayer));
-//    m_bullet->dumpPos();
-
     rotate(step_down);
-
 }
 
 
@@ -112,8 +97,6 @@ void BaseTank::concreteStep(Step step)
     auto isAllowed = GameController::get().isStepAllowed(this, QRect(coord, getSize()));
     if (isAllowed)
         setPosition(coord);
-
-//    m_bullet->setPosition(bulletCoord());
 }
 
 
@@ -142,9 +125,6 @@ void BaseTank::fire()
         m_bullet->setPosition(bulletCoord());
         m_bullet->activate(stepToDirection(m_lastStep));
     }
-    qDebug() << "Direction: " << stepToDirection(m_lastStep)
-             << " | Bullet coord: " << bulletCoord()
-             << " | tank pos: " << getInfo();
 }
 
 

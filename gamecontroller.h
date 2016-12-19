@@ -15,7 +15,7 @@
 #include "bot.h"
 #include "eagle.h"
 #include "brick.h"
-
+#include "player.h"
 
 class GameController : public QObject
 {
@@ -87,6 +87,8 @@ private:
 //    QList<BaseTank*> m_bots;
     QList<std::shared_ptr<BaseTank>> m_bots;
     QList<std::shared_ptr<BaseTank>> m_players;
+//    QList<std::shared_ptr<Player>> m_players;
+
     QList<Brick*> m_bricks;
     QObject* m_statisticInfo;
     QObject* m_endWindow;
@@ -147,6 +149,8 @@ public slots:
     // For future
     void freezeBots();
     void unfreezeBots();
+
+    void keyPressed(Qt::Key);
 
 };
 

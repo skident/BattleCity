@@ -303,3 +303,46 @@ void GameController::unfreezeBots()
         bot->unfreeze();
     }
 }
+
+void GameController::keyPressed(Qt::Key key)
+{
+    switch(key)
+    {
+    case Qt::Key_Up:
+    case Qt::Key_Down:
+    case Qt::Key_Left:
+    case Qt::Key_Right:
+    case Qt::Key_Space:
+    {
+        if (m_players.size() == 0)
+            return;
+
+        std::shared_ptr<Player> player = std::dynamic_pointer_cast<Player>( m_players.at(0));
+        player->keyPressed(key);
+    }
+        return;
+
+
+    case Qt::Key_W:
+    case Qt::Key_A:
+    case Qt::Key_S:
+    case Qt::Key_D:
+    case Qt::Key_Control:
+    {
+        if (m_players.size() < 2)
+            return;
+
+        std::shared_ptr<Player> player = std::dynamic_pointer_cast<Player>( m_players.at(1));
+        player->keyPressed(key);
+    }
+        return;
+
+
+    case Qt::Key_Escape:
+        restart();
+        return;
+
+    default:
+        return;
+    }
+}

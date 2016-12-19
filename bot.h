@@ -1,7 +1,6 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-//#include <QQuickItem>
 #include <atomic>
 #include "basetank.h"
 
