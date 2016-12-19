@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Brick.qml</file>
+        <file>qml/Bullet.qml</file>
+        <file>qml/Eagle.qml</file>
+        <file>qml/EnemyTank.qml</file>
+        <file>qml/Explosion.qml</file>
+        <file>qml/Field.qml</file>
+        <file>qml/Level_1.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/sprites/brick.png</file>
+        <file>qml/sprites/eagle.png</file>
+        <file>qml/sprites/enemy.png</file>
+        <file>qml/sprites/explosion.gif</file>
+        <file>qml/sprites/stone.png</file>
+        <file>qml/sprites/tank.png</file>
+        <file>qml/sprites/tank_new.png</file>
+        <file>qml/Player.qml</file>
+    </qresource>
+</RCC>
